@@ -1,108 +1,251 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>小仙女和狗子</title>
+    <!-- Copyright © 2020 by www.x6k.com -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小高教学网与某某 - www.12580sky.com</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
-<style type="text/css">
-@font-face {
-	font-family: digit;
-	src: url('digital-7_mono.ttf') format("truetype");
-}
-</style>
+        .wrap {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://s.cn.bing.net/th?id=OHR.FiordlandRainforest_ZH-CN4528847139_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&qlt=30);
+            background-size: cover;
+            background-position: center;
+        }
 
-<link href="css/default.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/garden.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
+        .wrap-son {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1;
+            background: rgba(59, 59, 59, 0.3);
+        }
 
+        .jumbotron {
+            background: rgba(255, 255, 255, 0);
+            color: #f5f5f5;
+        }
+
+        .love {
+            color: #ffffff;
+            margin: 0 20px;
+            line-height: 1.3;
+            font-weight: 300;
+        }
+
+        .hans-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 120px;
+            z-index: 1;
+        }
+
+        .timer b {
+            font-size: 100px;
+        }
+
+        #s {
+            font-size: 100px;
+        }
+
+        #updatalove,
+        #to_comments {
+            margin: 0 10px;
+        }
+
+        .copy {
+            position: absolute;
+            bottom: 0;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        /* 评论 */
+        .comment {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="wrap">
+        <div class="wrap-son">
+            <div class="container-fluid">
+                <div class="box">
+                    <div class="jumbotron text-center">
+                        <h1>我们相恋了</h1>
+                        <h3 class="timer">
+                            <div class="row">
+                                <b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分
+                            </div>
+                            <div class="row">
+                                <b id="s"></b> 秒
+                            </div>
+                        </h3>
+                        <p>
+                            <a id="to_comments" class="btn btn-primary btn-lg" role="button">留个言吧</a>
+                        </p>
+                    </div>
+                </div>
 
-<div id="mainDiv">
-	<div id="content">
-		<div id="code">
-			<span class="comments">/**</span><br />
-			<span class="space"/><span class="comments">*2018—01-11,</span><br />
-			<span class="space"/><span class="comments">*/</span><br />
-			Boy name = <span class="keyword">Mr</span> Liu Yang<br />
-			Girl name = <span class="keyword">Mrs</span> Zhang Zhi Lin<br />
-			<span class="comments">// Fall in love river. </span><br />
-			The boy love the girl;<br />
-			<span class="comments">// They love each other.</span><br />
-			The girl loved the boy;<br />
-			<span class="comments">// AS time goes on.</span><br />
-			The boy can not be separated the girl;<br />
-			<span class="comments">// At the same time.</span><br />
-			The girl can not be separated the boy;<br />
-			<span class="comments">// Both wind and snow all over the sky.</span><br />
-			<span class="comments">// Whether on foot or 5 kilometers.</span><br />
-			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
-			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
-			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
-			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
-			<span class="placeholder"/>The boy has but one dream;<br />
-			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
-			<br>
-			<br>
-			I want to say:<br />
-			Baby Lin, I love you forever;<br />
-		</div>
-		<div id="loveHeart">
-			<canvas id="garden"></canvas>
-			<div id="words">
-				<div id="messages">
-					小仙女，这是我们相爱在一起的时光。
-					<div id="elapseClock"></div>
-				</div>
-				<div id="loveu">
-					喜欢小仙女直到永永远远。<br/>
-					<div class="signature">- 狗子</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="copyright">
-		<a href="#">....</a><br />
-		<a href="#">....</a><br />
-		
-	</div>
-</div>
+                <div class="row">
+                    <h4 class="love text-center"><span class="love-son"></span></h4>
+                </div>
 
-<script type="text/javascript">
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2018, 1, 11);
-together.setHours(00);
-together.setMinutes(0);
-together.setSeconds(0);
-together.setMilliseconds(0);
 
-if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
-} else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
 
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
+                <div id="hans-bolang"></div>
+            </div>
+        </div>
+    </div>
 
-	adjustCodePosition();
-	$("#code").typewriter();
-}
-</script>
+    <div class="container-fluid" id="comments">
+        <div class="row comment">
+            <div class="col-xs-10 col-sm-10 col-md-6 col-xs-push-1 col-sm-push-1 col-md-push-3">
+                <h2>留言：</h2>
+                <div id="vcomments"></div>
+            </div>
+        </div>
+    </div>
 
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/Valine.min.js'></script><!-- Valine 评论系统 -->
+
+    <!-- 计时器 -->
+    <script>
+        function timer() {
+            var start = new Date(2018, 01, 31, 13, 14, 00); // 2020.07.31 13:14:00
+            var t = new Date() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+
+    <script>
+        var oComments = document.querySelector("#comments");
+        var oCommentsTop = Math.round(oComments.offsetTop);
+        //运动框架
+        function move() {
+            // 1. 关闭开启定时器;
+            clearInterval(timer);
+            var timer = setInterval(function () {
+                // 2. 计算速度;
+                var iNow = document.documentElement.scrollTop || document.body.scrollTop; //100
+                iNow = Math.round(iNow);
+                var speed = (oCommentsTop - iNow) / 10;
+                // 3. 速度取整;
+                if (speed > 0) {
+                    speed = Math.ceil(speed);
+                } else {
+                    speed = Math.floor(speed);
+                }
+                document.documentElement.scrollTop = document.body.scrollTop = iNow + speed + 1;
+                // 4. 终止条件;
+                if (iNow >= oCommentsTop) {
+                    clearInterval(timer);
+                }
+            }, 20)
+        }
+
+        to_comments.onclick = move;
+    </script>
+
+    <!-- 情话接口 -->
+    <script>
+        //进入页面时请求
+        $.ajax({
+            url: 'php/love.php',
+            type: "GET",
+            async: true,
+            data: "type=json",
+            dataType: "json",
+            success: function (loveJson) {
+                let love = loveJson["data"];
+                $(".love-son").append(love);
+            },
+            error: function (textStatus) {
+                console.log(JSON.stringify(textStatus));
+            }
+        });
+
+        //点击时请求
+        $(".love").click(function () {
+            $.ajax({
+                url: 'php/love.php',
+                type: "GET",
+                async: true,
+                data: "type=json",
+                dataType: "json",
+                success: function (loveJson) {
+                    let love = loveJson["data"];
+                    love = `<span class="love-son"">${love}</span>`;
+                    $(".love").children().replaceWith(love);
+                },
+                error: function (textStatus) {
+                    console.log(JSON.stringify(textStatus));
+                }
+            });
+        });
+
+        $("#updatalove").click(function () {
+            $.ajax({
+                url: 'php/love.php',
+                type: "GET",
+                async: true,
+                data: "type=json",
+                dataType: "json",
+                success: function (loveJson) {
+                    let love = loveJson["data"];
+                    love = `<span class="love-son"">${love}</span>`;
+                    $(".love").children().replaceWith(love);
+                },
+                error: function (textStatus) {
+                    console.log(JSON.stringify(textStatus));
+                }
+            });
+        });
+    </script>
+
+    <!-- Valine 评论系统； 由 LeanCloud 管理数据 -->
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'V6l2CQp7rpDMfoMfppUB7MW9-gzGzoHsz',
+            appKey: 'yT85q1BlgwzBtjjmkCPbyESY'
+        })
+    </script>
+
+    <!-- 底部波浪 -->
+    <script src="php/wave.php"></script>
 </body>
+
 </html>
