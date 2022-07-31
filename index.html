@@ -130,7 +130,7 @@
             var end = new Date()
             var t = end.getTime() - start.getTime()
             <!-- var t = new Date() - start; -->
-            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24)
+            var Difference_In_Days = t / (1000 * 3600 * 24)
             
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
