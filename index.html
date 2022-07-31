@@ -129,8 +129,9 @@
             var start = new Date(2021, 09, 29, 13, 14, 00); // 2020.07.31 13:14:00
             var end = new Date()
             var t = end.getTime() - start.getTime()
-            
             <!-- var t = new Date() - start; -->
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24)
+            
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
@@ -144,7 +145,8 @@
             if (s < 10) {
                 s = "0" + s;
             }
-            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('d').innerHTML = Difference_In_Days;
+            <!-- ~~(t / 1000 / 60 / 60 / 24); -->
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
