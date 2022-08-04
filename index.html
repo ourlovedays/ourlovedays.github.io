@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>吉吉与洋洋の奇妙探险</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"><!-- chocolate css for gallery light box-->
+<!-- animation -->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<!-- //animation --> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/head.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- onlinefonts -->
+<link href="http://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+<!-- //onlinefonts -->
+
+
+<style>
+        html,
+        body {
+            height: 100%;
+        }
+		
+		.port-head{
+			margin-top: 200px;
+		}
+		
+		.vwrap{
+			margin-top: 20px;
+		}
+
+        .wrap {
+            position: relative;
+            height: 180px;
+            width: 100%;
+        }
+
+        .wrap-son {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .jumbotron {
+            background: rgba(255, 255, 255, 0);
+            color: #f5f5f5;
+        }
+
+        .love {
+            color: #ffffff;
+            margin: 0 20px;
+            line-height: 1.3;
+            font-weight: 300;
+        }
+
+        .hans-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 120px;
+            z-index: 1;
+        }
+
+        .timer b {
+			line-height: 5px;
+            font-size: 40px;
+        }
+
+        #s {
+			
+            font-size: 40px;
+        }
+
+        #updatalove,
+        #to_comments {
+            margin: 0 10px;
+            position: absolute;
+        }
+
+        .copy {
+            position: absolute;
+            bottom: 0;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        /* 评论 */
+        
+        .navbar .container{
+        	height: 100%;
+        }
+        .row{
+        	display: inline-block;
+        	float: center;
+        	padding: 20px 20px;
+        }
+        .date{
+        	text-align: center;
+			margin-left: 0em;
+        }
+    </style>
+
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"> 
+		<!-- header -->
+		<div class="header-w3layouts"> 
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">吉吉与洋洋の奇妙探险</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html" style="font-size: 4;">吉吉与洋洋の奇妙探险</a></h1>
+					</div> 
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+							<li><a class="page-scroll scroll active" href="#home">Home</a></li>
+							
+							
+							<li><a class="page-scroll scroll" href="#port">ourpicture</a></li>
+							<li><a class="page-scroll scroll" href="#contact">留言</a></li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container -->
+			</nav>  
+		</div>	
+		<!-- //header -->
+		<div class="header jarallax" id="home">
+			<div class="container">
+				<div class="banner-text text-center">
+					<h2>This is our Secret Base</h2>
+					<h3> - Jiji  Yangyang - </h3>
+					<p>一起来奇妙探险吧！ </p>
+					<div class="w3l-button banner-btn">
+							<a href="#">ourlovedays</a>
+					</div>
+				</div>	
+				<div class="w3-arrow bounce animated">
+				<a href="#port" class="scroll"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+			</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		
+
+	
+	
+
+		<!--<div class="container">-->	
+		<div class="wrap">
+        <div class="wrap-son">
+            <div class="container-fluid">
+                <div class="box">
+                    <div class="jumbotron text-center">
+                        <h3>吉吉与洋洋の奇妙探险已经</h3>
+                     <div class="date"> 
+                        <h3 class="timer">
+                            <div class="row">
+                                <b id="d"></b> 天  
+                                <b id="h"></b> 时 <b id="m"></b> 分
+                                <b id="s"></b> 秒
+                            </div>
+                        </h3>
+                      </div>
+                        <!--<div>
+                            <a href="#comments" id="to_comments" class="scroll" role="button">留个言吧</a>
+                        </div>	-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h4 class="love text-center"><span class="love-son"></span></h4>
+                </div>
+
+
+
+                <div id="hans-bolang"></div>
+            </div>
+        </div>
+    </div>
+		
+	<!--</div>-->
+
+
+	<!-- modal 
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						<h4 class="modal-title">Vitae</h4>
+				</div> 
+				<div class="modal-body">
+					<div class="about"> 
+						<div class="col-md-4 col-sm-4  col-xs-4 about-left ">
+							<img src="images/3.jpg" class="img-responsive" alt=""/>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8 about-right wthree">
+							<h3>Hi, i'm <span>John M. Rich </span></h3>
+							<h4>Web Designer & Developer </h4>
+							<ul class="address">
+								<li>
+									<ul class="agileits-address-text ">
+										<li><b>D.O.B</b></li>
+										<li>23-06-1980</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li><b>PHONE </b></li>
+										<li>+00 111 222 3333</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li><b>ADDRESS </b></li>
+										<li>756 global Place, North Sydney, Canada.</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li><b>E-MAIL </b></li>
+										<li><a href="mailto:example@mail.com"> mail@example.com</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="agileits-address-text">
+										<li><b>WEBSITE </b></li>
+										<li><a href="#">www.cssmoban.com</a></li>
+									</ul>
+								</li>
+							</ul> 
+						</div> 
+						<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+ -->
+ 
+<!-- Portfolio -->
+       <div class="portfolio" id="port">
+		       <div class="port-head" style="margin-top: 50px;">
+							<h3 class="w3l-heading"> ourpicture</h3>
+						</div>
+			<div class="simplefilter">
+            <ul class="simplefilter">
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="1">吉吉</li>
+                <li data-filter="2">洋洋</li>
+                <li data-filter="3">US</li>
+               
+            </ul>
+            </div>
+     
+            <div class="filtr-container">
+                
+				<div class="  filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
+				 <a href="images/all.jpeg" class="b-link-stripe b-animate-go  thickbox">
+	
+					<figure class="w3ls-gallery">
+					 <img src="images/all.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3></h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+                </div>
+				
+				<div class=" filtr-item" data-category="2, 3" data-sort="City wonders">
+                    <a href="images/y2.jpeg" class="b-link-stripe b-animate-go  thickbox">
+
+					<figure class="w3ls-gallery">
+					 <img src="images/y2.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+						
+						</figcaption>
+					</figure>
+				</a>
+
+                </div>
+				<div class=" filtr-item" data-category="1, 3 " data-sort="Luminous night">
+                   <a href="images/j3.jpeg" class="b-link-stripe b-animate-go  thickbox">
+
+					<figure class="w3ls-gallery">
+					 <img src="images/j3.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+                </div>
+                <div class="  filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
+				 <a href="images/j4.jpeg" class="b-link-stripe b-animate-go  thickbox">
+	
+					<figure class="w3ls-gallery">
+					 <img src="images/j4.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+                </div>
+                <div class="  filtr-item" data-category="3" data-sort="In production">
+                   <a href="images/h1.jpeg" class="b-link-stripe b-animate-go  thickbox">
+
+					<figure class="w3ls-gallery">
+					 <img src="images/h1.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+
+                </div>
+                <div class=" filtr-item" data-category="3, 2" data-sort="Industrial site">
+                  <a href="images/y1.jpeg" class="b-link-stripe b-animate-go  thickbox">
+
+					<figure class="w3ls-gallery">
+					 <img src="images/y1.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+                </div>
+                <div class=" filtr-item" data-category="1, 3" data-sort="Peaceful lake">
+                    <a href="images/j1.jpeg" class="b-link-stripe b-animate-go  thickbox">
+
+					<figure class="w3ls-gallery">
+					 <img src="images/j1.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+					</a>
+                </div>
+                 <div class="  filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
+				 <a href="images/j2.jpeg" class="b-link-stripe b-animate-go  thickbox">
+	
+					<figure class="w3ls-gallery">
+					 <img src="images/j2.jpeg" class="img-responsive" alt=" " />	<figcaption class="w3layouts-caption">
+							<h3>Wonderful moments</h3>
+							
+						</figcaption>
+					</figure>
+				</a>
+                </div>
+               <div class="clearfix"> </div>
+	        </div>
+		 </div>
+		 <div class="port-head">
+			<h4 class="w3l-heading"><a href="project.html">查看更多</a></h4>
+		 </div>
+<!-- //Portfolio -->
+
+
+
+<!-- contact -->
+<div id="contact" class="w3_agileits-contact">
+		<div class="container">	
+				<h3 class="w3l-heading" >留言</h3>
+				<div id="vcomments"></div>
+					
+				<div class="disigner">
+					
+                		
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/Valine.min.js'></script><!-- Valine 评论系统 -->
+					
+					
+				</div>
+		</div>	
+</div>	
+<!-- footer -->
+<div class="agileits_w3layouts-footer text-center">
+	<div class="container">
+		<p>BY JIJI and YANGYANG</p>
+	</div>
+</div>	
+<!-- //footer -->	
+<!-- //contact -->
+<!-- PopUp-Box-JavaScript -->
+		<script src="js/jquery.chocolat.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-item a').Chocolat();
+			});
+		</script>
+	<!-- //PopUp-Box-JavaScript -->	
+	<!-- fliter-JavaScript -->
+		<script src="js/jquery.filterizr.js"></script>
+		<script src="js/controls.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-container').filterizr();
+			});
+		</script>
+	<!-- //fliter-JavaScript -->
+<script src="js/jarallax.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+	/* init Jarallax */
+	$('.jarallax').jarallax({
+		speed: 0.5,
+		imgWidth: 1366,
+		imgHeight: 768
+	})
+</script>
+<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/easing.js"></script>
+<!-- //here ends scrolling icon -->
+	
+ <script>
+        function timer() {
+            var start = new Date(2021, 8, 29, 22, 00, 00); // 2020.07.31 13:14:00
+            var t = new Date() - start;
+            
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+
+    <script>
+        var oComments = document.querySelector("#comments");
+        var oCommentsTop = Math.round(oComments.offsetTop);
+        //运动框架
+        function move() {
+            // 1. 关闭开启定时器;
+            clearInterval(timer);
+            var timer = setInterval(function () {
+                // 2. 计算速度;
+                var iNow = document.documentElement.scrollTop || document.body.scrollTop; //100
+                iNow = Math.round(iNow);
+                var speed = (oCommentsTop - iNow) / 10;
+                // 3. 速度取整;
+                if (speed > 0) {
+                    speed = Math.ceil(speed);
+                } else {
+                    speed = Math.floor(speed);
+                }
+                document.documentElement.scrollTop = document.body.scrollTop = iNow + speed + 1;
+                // 4. 终止条件;
+                if (iNow >= oCommentsTop) {
+                    clearInterval(timer);
+                }
+            }, 20)
+        }
+
+        to_comments.onclick = move;
+    </script>
+
+    <!-- Valine 评论系统； 由 LeanCloud 管理数据 -->
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'K4hz3fsb72zkmcnNNkKKeEsB-gzGzoHsz',
+            appKey: 'LrCpt7IpYqqUzXXc3ihOl50T'
+        })
+    </script>
+
+    <!-- 底部波浪 -->
+    <script src="php/wave.php"></script>
+</body>
+</html>
