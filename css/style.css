@@ -21,6 +21,20 @@ body a:focus, a:hover {
 	text-decoration: none;
 	outline:none;
 }
+
+.snowflake {
+	position: fixed;
+	background-color: #fff;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: transform 1s ease, opacity 1s ease;
+  }
+  
+  .snowflake.fade-out {
+	opacity: 0;
+	transform: translateY(5vh) rotateZ(360deg);
+  }
+  
 input[type="button"], input[type="submit"], button.btn {
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -88,7 +102,7 @@ a:hover{
 	margin: auto;
 }
 h1 a.navbar-brand {
-    font-size:0.6em.;
+    font-size:0.6em;
     color: #fff !important;
     padding: 0;
     height: inherit;
@@ -156,9 +170,10 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
 .header {
     background:url(../images/background.jpg) center no-repeat;
     background-size: cover;
+	height: 100%;
 }
 .banner-text.text-center {
-    padding: 21em 0 9em;
+    padding: 21em 0 0em;
 }
 /*-- //header --*/ 
 .scroll-down a span{
@@ -970,7 +985,7 @@ ul.address li ul.agileits-address-text li a:hover{
 }
 @media screen and (max-width: 1024px){
 	.banner-text.text-center {
-		padding: 15em 0 9em;
+		padding: 15em 0 0em;
 	}
 	.w3l-about {
 		width: 66%;
@@ -1017,7 +1032,7 @@ ul.address li ul.agileits-address-text li a:hover{
 		letter-spacing: 3px;
 	}
 	.banner-text.text-center {
-		padding: 17em 0 9em;
+		padding: 17em 0 0em;
 	}
 	figcaption.w3layouts-caption h3 {
 		margin-top: 150px;
